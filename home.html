@@ -5,7 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>	
+	<head>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-C6EZ2RY7W0"></script>
 		<script>
@@ -23,9 +23,22 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THK3N3P"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Welcome, <span id="userName"></span>!</h1>
+						<p>A innovate people who really like coding, <a href="books.html">reading</a> and <a href="movies.html">watching movies</a><br />
+						Let me tell you my favorite <a href="jeepcar.html">car</a> and <a href="golden.html">puppy</a>.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
 
 				<!-- Header -->
 					<header id="header">
@@ -35,10 +48,10 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">This is Xiang Liu's website</a></li>
+							<li class="active"><a href="index.html">This is Xiang Liu's website</a></li>
 							<li><a href="movies.html">Movies</a></li>
 							<li><a href="books.html">Books</a></li>
-							<li class="active"><a href="jeepcar.html">Car</a></li>
+							<li><a href="jeepcar.html">Car</a></li>
 							<li><a href="golden.html">Puppy</a></li>
 						</ul>
 						<ul class="icons">
@@ -52,28 +65,56 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post -->
-							<section class="post">
+						<!-- Featured Post -->
+							<article class="post featured">
 								<header class="major">
 									<span class="date">2023</span>
-									<h1>My Favorite Car:<br />
-									A Pink Jeep</h1>
+									<h2><a href="#">A Beginner's Journey: <br />
+										Start Coding</a></h2>
+									<p>As a beginner in coding, I have only recently started to develop my skills in this field. <br>Since starting in 2022, I have been learning the basics of programming languages <br> and working on various projects to improve my abilities.<br>
+									While I still have much to learn, I am excited to continue my journey in coding and see where it takes me.</p>
 								</header>
-								<div class="image main"><img src="images/car.gif" alt="" /></div>
-								<p>My favorite car is the Jeep. Jeeps have a unique combination of off-road capabilities and rugged design, which I find very appealing. They are known for their durability and versatility, which makes them perfect for exploring the great outdoors or for navigating through rough terrain. Jeeps are also known for their unique style and design, which gives them a distinct and rugged appearance.</p>
-								<p>Additionally, I appreciate Jeep's long history of building reliable and versatile vehicles that can tackle any terrain. Jeep's have been used in military operations, off-road adventures and even in everyday life, which speaks to their reliability and durability.</p>
+								<a href="#" class="image main"><img src="images/1.gif" alt="" /></a>
+								<ul class="actions special">
+									<li><a href="books.html" class="button">Full Story</a></li>
+								</ul>
+							</article>
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+									<header>
+										<span class="date">November 24, 2022</span>
+										<h2><a href="#">Certificates</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/2.png" alt="" /></a>
+									<ul class="actions special">
+										<li><a href="certificates/Xiang Liu_GitHub Concepts.pdf" download class="button large">Download</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">December 22, 2022</span>
+										<h2><a href="#">Certificates</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/3.jpg" alt="" /></a>
+									<ul class="actions special">
+										<li><a href="certificates/Xiang Liu_Web Scraping in Python.pdf" download class="button large">Download</a></li>
+									</ul>
+								</article>
 							</section>
+
 						<!-- Footer -->
-						<footer>
-							<div class="pagination">
-								<!--<a href="#" class="previous">Prev</a>-->
-								<a href="index.html" class="page">1</a>
-								<a href="movies.html" class="page">2</a>
-								<a href="books.html" class="page">3</a>
-								<a href="jeepcar.html" class="page active">4</a>
-								<a href="golden.html" class="page">5</a>
-							</div>
-						</footer>
+							<footer>
+								<div class="pagination">
+									<!--<a href="#" class="previous">Prev</a>-->
+									<a href="index.html" class="page active">1</a>
+									<a href="movies.html" class="page">2</a>
+									<a href="books.html" class="page">3</a>
+									<a href="jeepcar.html" class="page">4</a>
+									<a href="golden.html" class="page">5</a>
+								</div>
+							</footer>
 
 					</div>
 
@@ -141,6 +182,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				var urlParams = new URLSearchParams(window.location.search);
+				var yourName = urlParams.get("your_name");
+				document.getElementById("userName").innerHTML = yourName;
+			  </script>
 	</body>
 </html>
